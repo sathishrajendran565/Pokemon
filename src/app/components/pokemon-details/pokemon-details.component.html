@@ -1,0 +1,57 @@
+<div>
+  <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title"><strong><em>{{name}}</em></strong></h4>
+          <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+          <div class="container">
+              
+            
+                    <div class="row">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr class="table-danger">
+                                    <td class="col-2"><strong><em>Name</em></strong></td>
+                                    <td class="col-2"><strong><em>Height</em></strong></td>
+                                    <td class="col-2"><strong><em>Weight</em></strong></td>
+                                    <td class="col-2"><strong><em>Abilities</em></strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-2"><strong><em>{{name}}</em></strong></td>
+                                    <td class="col-2"><strong><em>{{height}}</em></strong></td>
+                                    <td class="col-2"><strong><em>{{weight}}</em></strong></td>
+                                    <td class="col-3"><li *ngFor="let p of abilities"><strong><em>{{p.ability.name}}</em></strong></li></td>                             
+                                </tr>                          
+                            </tbody>
+                        </table>                            
+                        </div>               
+              
+              <div class="row">
+                  <div class="col">
+
+                      <img class="img-fluid img-thumbnail" [src]="sprites.back_default">
+                  </div>
+                  <div class="col">
+
+                      <img class="img-fluid img-thumbnail" [src]="sprites.back_shiny">
+                  </div>
+                  <div class="col">
+
+                      <img class="img-fluid img-thumbnail" [src]="sprites.front_default">
+                  </div>
+                  <div class="col">
+
+                      <img class="img-fluid img-thumbnail" [src]="sprites.front_shiny">
+                  </div>
+              </div>
+              </div>
+          </div>
+     
+      <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+      </div>
+  </div>
+</div>
